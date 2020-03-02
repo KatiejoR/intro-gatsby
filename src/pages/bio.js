@@ -9,15 +9,31 @@ import {Link} from "gatsby"
 import Layout from "..//components/layout"
 import SEO from "../components/seo"
 
+//Replacing the previous content with our "People" component. I can now reuse the
+//component with my custom styles only applied to the component
+import People from "..//components/people"
+
 //Adding a conponent inside the "pages" directory will automatically create
 //
 const Bio = () => {
     return (
         <Layout>
             <SEO title="Bio" />
-            <img src="https://source.unsplash.com/random/400x200" alt=""/>
-            <h1>Hi, My name is Katie.</h1>
-            <p>lorem100   </p>
+            <People
+                avatar="https://source.unsplash.com/random/"
+                title="Katie"
+                excerpt="This is some Text"
+            />
+               <People
+                avatar="https://source.unsplash.com/random/"
+                title="Sue"
+                excerpt="This is some Text"
+            />
+               <People
+                avatar="https://source.unsplash.com/random/"
+                title="Matt"
+                excerpt="This is some Text"
+            />
             <Link to="/">&larr; Back to Home</Link>
         </Layout>
     )
